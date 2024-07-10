@@ -5,6 +5,12 @@ Official Repository of the paper: [Accelerating Image Generation with Sub-path L
 Project Page: https://subpath-linear-approx-model.github.io/
 
 
+## News
+
+- \[2024/07/01\] 🎉 Our SPLAM has been accepted by ECCV2024!
+- \[2024/05/07\] 🔥 We provide the pre-trained model in 🤗 Hugging Face, download [here](https://huggingface.co/collections/alimama-creative/slam-662f1dd31d5c8cd0b3acb0e0).
+- \[2024/04/23\] 🔥 We release the paper on [Arxiv](https://arxiv.org/abs/2404.13903).
+
 ## Usage
 
 ### Environment Setting
@@ -57,6 +63,24 @@ accelerate launch train_splam_distill_sd_wds.py \
     --report_to=wandb \
     --seed=453645634 \
     --push_to_hub
+```
+
+### Inference
+We implement SPLAM to be compatible with [LCMScheduler](https://github.com/huggingface/diffusers/blob/main/src/diffusers/schedulers/scheduling_lcm.py) interface. You can use SPLAM similarly, with guidance_scale set to 1 constantly:
+```python
+from diffusers import DiffusionPipeline
+import torch
+
+pipe = DiffusionPipeline.from_pretrained("alimama-creative/slam-sd1.5")
+
+# To save GPU memory, torch.float16 can be used, but it may compromise image quality.
+pipe.to(torch_device="cuda", torch_dtype=torch.float16)
+
+prompt = "a painting of a majestic kingdom with towering castles, lush gardens, ice and snow world"
+
+num_inference_steps = 2
+
+images = pipe(prompt=prompt, num_inference_steps=num_inference_steps, guidance_scale=1, lcm_origin_steps=50, output_type="pil").images
 ```
 
 
