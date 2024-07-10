@@ -638,7 +638,7 @@ def parse_args():
     parser.add_argument(
         "--w_scale",
         type=float,
-        default=5.0,
+        default=8.0,
         required=False,
         help="The guidance scale value for guidance scale sampling.",
     )
