@@ -6,8 +6,8 @@ Project Page: https://subpath-linear-approx-model.github.io/
 
 
 ## News
-
-- \[2024/07/01\] 🎉 Our SPLAM has been accepted by ECCV2024!
+- \[2024/08/12\] 🎉 Our SPLAM is selected as an oral presentation by ECCV 2024.
+- \[2024/07/01\] 🎉 Our SPLAM has been accepted by ECCV 2024!
 - \[2024/05/07\] 🔥 We provide the pre-trained model in 🤗 Hugging Face, download [here](https://huggingface.co/collections/alimama-creative/slam-662f1dd31d5c8cd0b3acb0e0).
 - \[2024/04/23\] 🔥 We release the paper on [Arxiv](https://arxiv.org/abs/2404.13903).
 
