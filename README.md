@@ -4,7 +4,7 @@
 [![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/collections/alimama-creative/slam-662f1dd31d5c8cd0b3acb0e0)
 [![GitHub](https://img.shields.io/github/stars/MCG-NJU/SPLAM?style=social)](https://github.com/MCG-NJU/SPLAM)
 
-Official Repository of our ECCV 2024 paper: [Accelerating Image Generation with Sub-path Linear Approximation Model](https://arxiv.org/abs/2404.13903)
+Official Repository of our ECCV 2024 Oral paper: [Accelerating Image Generation with Sub-path Linear Approximation Model](https://arxiv.org/abs/2404.13903)
 
 Project Page: https://subpath-linear-approx-model.github.io/
 
